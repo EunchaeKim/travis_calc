@@ -1,3 +1,6 @@
+notifications:
+  slack: sungshin-it:9K69Z18QBC6SfzXt2zE16Epx
+  
 language: java 
 dist: trusty
 addons:
