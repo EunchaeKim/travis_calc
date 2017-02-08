@@ -1,1 +1,9 @@
-language: java
+language: java 
+dist: trusty
+addons:
+  sonarqube:
+    token:
+      secure: 974a341d759881328a7b0372771bce5213d30758 # encrypted value of your token
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarQube analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
