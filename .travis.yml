@@ -1,6 +1,3 @@
-notifications:
-  slack: sungshin-it:9K69Z18QBC6SfzXt2zE16Epx
-  
 language: java 
 dist: trusty
 addons:
@@ -10,3 +7,6 @@ addons:
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarQube analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  
+ notifications:
+  slack: sungshin-it:9K69Z18QBC6SfzXt2zE16Epx
